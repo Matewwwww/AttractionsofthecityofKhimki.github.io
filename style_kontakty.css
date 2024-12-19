@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('font/Roboto-Light.ttf') format('woff2'),
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 150px;
+    background-color: #4D6B23;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header button {
+    background: linear-gradient(to right, #FFFF, #CDCDCD);
+    font-family: 'Roboto', sans-serif;
+}
+
+footer button {
+    background: linear-gradient(to right, #FFFF, #CDCDCD);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    animation: slideIn 0.5s ease-in-out;
+    background-image: url(img/lest.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+main.fade-out {
+    animation: slideOut 0.5s ease-in-out forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
+
+footer {
+    height: 150px;
+    background-color: #4D6B23;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 50px;
+    margin-left: 0;
+    color: #1A555A;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: #FFFF;
+}
+
+.container p {
+    color: #FFFF;
+    text-shadow: 0px 0px 1px white;
+}
+
+.marg {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.zag {
+    width: 600px;
+    height: 65px;
+    background-color: #4D6B23;
+    opacity: 0.9;
+    font-size: 36px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFFF;
+}
+
+.zagg {
+    width: 600px;
+    height: 65px;
+    background-color: #4D6B23;
+    opacity: 0.9;
+    font-size: 36px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFFF;
+}
+
+.fotki {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    margin-right: 10px;
+}
+
+.item p {
+    font-size: 36px;
+}
+
+.back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease;
+    opacity: 0;
+    z-index: 1000;
+    font-family: 'Roboto';
+    background-image: url('img/free-icon-arrow-14025345.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.back-to-top-btn.show {
+    display: block;
+    opacity: 1;
+}
+
+.back-to-top-btn:hover {
+    width: 65px;
+    height: 65px;
+}
